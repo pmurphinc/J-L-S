@@ -10,8 +10,8 @@ import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import Disclaimer from "./pages/Disclaimer";
 import NotFound from "./pages/NotFound";
-
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path="/" component={Home} />
