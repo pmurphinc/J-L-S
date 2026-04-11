@@ -6,6 +6,8 @@ import { useState, useRef } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Phone, Mail, MapPin, Clock, Upload, CheckCircle, Shield } from "lucide-react";
+import { trpc } from "@/lib/trpc";
+import { toast } from "sonner";
 
 const serviceOptions = [
   { value: "legal-document-preparation", label: "Legal Document Preparation" },
@@ -50,15 +52,30 @@ export default function Contact() {
     if (file) setFileName(file.name);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const submitMutation = trpc.contact.submitIntake.useMutation();
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const errs = validate();
     if (Object.keys(errs).length > 0) {
       setErrors(errs);
       return;
     }
-    // In a static site, this simulates submission. A backend or form service (e.g. Formspree) can be connected here.
-    setSubmitted(true);
+
+    try {
+      await submitMutation.mutateAsync({
+        fullName: form.fullName,
+        email: form.email,
+        phone: form.phone,
+        serviceType: form.serviceType,
+        description: form.description,
+      });
+      setSubmitted(true);
+      toast.success("Request submitted! We'll be in touch within 1-2 business days.");
+    } catch (error) {
+      toast.error("Failed to submit request. Please try again.");
+      console.error("Submission error:", error);
+    }
   };
 
   return (

@@ -6,6 +6,7 @@ import { z } from "zod";
 import { createSubmission, getSubmissionById, updateSubmission, getAllSubmissions } from "./db";
 import { storagePut } from "./storage";
 import { invokeLLM } from "./_core/llm";
+import { notifyOwner } from "./_core/notification";
 
 export const appRouter = router({
   system: systemRouter,
@@ -18,6 +19,36 @@ export const appRouter = router({
         success: true,
       } as const;
     }),
+  }),
+
+  contact: router({
+    submitIntake: publicProcedure
+      .input(
+        z.object({
+          fullName: z.string().min(1, "Name required"),
+          email: z.string().email("Valid email required"),
+          phone: z.string().min(1, "Phone required"),
+          serviceType: z.string().min(1, "Service type required"),
+          description: z.string().min(1, "Description required"),
+        })
+      )
+      .mutation(async ({ input }) => {
+        try {
+          // Send notification to owner (Anna)
+          const title = `New Intake Request from ${input.fullName}`;
+          const content = `Client Name: ${input.fullName}\nEmail: ${input.email}\nPhone: ${input.phone}\nService Type: ${input.serviceType}\nDescription: ${input.description}\n\nPlease review this request and respond to the client within 1-2 business days.`;
+
+          await notifyOwner({ title, content });
+
+          return {
+            success: true,
+            message: "Your request has been received. We will be in touch within 1-2 business days.",
+          };
+        } catch (error) {
+          console.error("[Contact] Error submitting intake form:", error);
+          throw error;
+        }
+      }),
   }),
 
   submissions: router({
