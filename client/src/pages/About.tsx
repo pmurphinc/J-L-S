@@ -79,7 +79,7 @@ export default function About() {
             <div>
               <div className="section-label mb-3">Your Legal Document Assistant</div>
               <h2 className="font-['Cormorant_Garamond'] text-4xl font-semibold text-[#1A2744] mb-2">
-                [Your Name Here]
+                Anna Zeledon
               </h2>
               <div className="text-[#B8922A] text-sm font-['DM_Sans'] tracking-widest uppercase mb-6">
                 Licensed · Registered · Bonded Legal Document Assistant
@@ -93,16 +93,16 @@ export default function About() {
                 As a Licensed Legal Document Assistant (LDA), I am authorized under California Business & Professions Code §6400 et seq. to prepare legal documents for individuals representing themselves. I am not an attorney and do not provide legal advice, legal representation, or guidance on legal strategy.
               </p>
               <p className="text-[#6B7A99] font-['DM_Sans'] leading-relaxed mb-8">
-                My background includes [X years] of experience in legal document preparation, with a focus on [relevant areas — e.g., family law documents, civil filings, probate paperwork]. Every client receives personalized attention, clear communication, and documents prepared to the highest standard of accuracy.
+                Based in Lincoln, California, I am bonded for $25,000 through Jet Insurance Company (Bond #BX0081398) to ensure the highest level of client protection and professional accountability. Every client receives personalized attention, clear communication, and documents prepared to the highest standard of accuracy and compliance.
               </p>
               <div className="flex flex-wrap gap-4">
                 <div className="bg-[#F5EDE8] px-5 py-3 text-center">
-                  <div className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1A2744]">[X]+</div>
-                  <div className="text-xs text-[#6B7A99] font-['DM_Sans'] tracking-wider uppercase">Years Experience</div>
+                  <div className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1A2744]">Licensed</div>
+                  <div className="text-xs text-[#6B7A99] font-['DM_Sans'] tracking-wider uppercase">& Bonded</div>
                 </div>
                 <div className="bg-[#F5EDE8] px-5 py-3 text-center">
-                  <div className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1A2744]">[X]+</div>
-                  <div className="text-xs text-[#6B7A99] font-['DM_Sans'] tracking-wider uppercase">Clients Served</div>
+                  <div className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1A2744]">$25K</div>
+                  <div className="text-xs text-[#6B7A99] font-['DM_Sans'] tracking-wider uppercase">Bond Coverage</div>
                 </div>
                 <div className="bg-[#F5EDE8] px-5 py-3 text-center">
                   <div className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1A2744]">100%</div>

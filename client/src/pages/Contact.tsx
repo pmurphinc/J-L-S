@@ -5,7 +5,7 @@
 import { useState, useRef } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Phone, Mail, MapPin, Clock, Upload, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Upload, CheckCircle, Shield } from "lucide-react";
 
 const serviceOptions = [
   { value: "legal-document-preparation", label: "Legal Document Preparation" },
@@ -254,24 +254,24 @@ export default function Contact() {
                 <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold mb-5">Contact Information</h3>
                 <div className="flex flex-col gap-4 text-sm font-['DM_Sans']">
                   <div className="flex items-start gap-3">
-                    <Phone size={14} className="text-[#B8922A] mt-0.5 shrink-0" />
-                    <div>
-                      <div className="text-white/50 text-xs tracking-widest uppercase mb-0.5">Phone</div>
-                      <div className="text-white/80">[Phone Number Placeholder]</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
                     <Mail size={14} className="text-[#B8922A] mt-0.5 shrink-0" />
                     <div>
                       <div className="text-white/50 text-xs tracking-widest uppercase mb-0.5">Email</div>
-                      <div className="text-white/80">[Email Address Placeholder]</div>
+                      <a href="mailto:amz@justicelitsol.com" className="text-white/80 hover:text-[#B8922A] transition-colors">amz@justicelitsol.com</a>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <MapPin size={14} className="text-[#B8922A] mt-0.5 shrink-0" />
                     <div>
                       <div className="text-white/50 text-xs tracking-widest uppercase mb-0.5">Service Area</div>
-                      <div className="text-white/80">[Service Area Placeholder]</div>
+                      <div className="text-white/80">Lincoln, California</div>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Shield size={14} className="text-[#B8922A] mt-0.5 shrink-0" />
+                    <div>
+                      <div className="text-white/50 text-xs tracking-widest uppercase mb-0.5">Bonded</div>
+                      <div className="text-white/80">$25,000 (Jet Insurance)<br />Bond #BX0081398</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">

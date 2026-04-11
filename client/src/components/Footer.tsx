@@ -61,22 +61,22 @@ export default function Footer() {
           <div className="flex flex-col gap-3 text-sm font-['DM_Sans'] text-white/70">
             <div className="flex items-start gap-2.5">
               <Phone size={14} className="text-[#B8922A] mt-0.5 shrink-0" />
-              <span>[Phone Number Placeholder]</span>
+              <a href="tel:" className="hover:text-[#B8922A] transition-colors">Contact for phone</a>
             </div>
             <div className="flex items-start gap-2.5">
               <Mail size={14} className="text-[#B8922A] mt-0.5 shrink-0" />
-              <span>[Email Address Placeholder]</span>
+              <a href="mailto:amz@justicelitsol.com" className="hover:text-[#B8922A] transition-colors">amz@justicelitsol.com</a>
             </div>
             <div className="flex items-start gap-2.5">
               <MapPin size={14} className="text-[#B8922A] mt-0.5 shrink-0" />
-              <span>[Service Area Placeholder]</span>
+              <span>Lincoln, CA</span>
             </div>
             <div className="flex items-start gap-2.5">
               <Shield size={14} className="text-[#B8922A] mt-0.5 shrink-0" />
               <div>
-                <div>LDA Reg. No.: [Registration Number]</div>
-                <div>County: [County of Registration]</div>
-                <div>Bonded: Yes — Exp. [Expiration Date]</div>
+                <div>Licensed Legal Document Assistant</div>
+                <div>Bonded: $25,000 (Jet Insurance)</div>
+                <div>Bond #BX0081398</div>
               </div>
             </div>
           </div>
