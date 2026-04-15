@@ -2,10 +2,10 @@
    Contact / Intake Form Page — Justice Litigation Solutions
    Design: "Velvet Counsel" — Most important page; clean form, navy/gold
    ============================================================ */
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Phone, Mail, MapPin, Clock, Upload, CheckCircle, Shield } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, CheckCircle, Shield } from "lucide-react";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 
@@ -25,10 +25,8 @@ export default function Contact() {
     serviceType: "",
     description: "",
   });
-  const [fileName, setFileName] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const fileRef = useRef<HTMLInputElement>(null);
 
   const validate = () => {
     const e: Record<string, string> = {};
@@ -45,11 +43,6 @@ export default function Contact() {
     if (errors[e.target.name]) {
       setErrors((prev) => { const next = { ...prev }; delete next[e.target.name]; return next; });
     }
-  };
-
-  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) setFileName(file.name);
   };
 
   const submitMutation = trpc.contact.submitIntake.useMutation();
@@ -130,7 +123,7 @@ export default function Contact() {
                     Thank you for reaching out to Justice Litigation Solutions. We have received your request and will be in touch within 1–2 business days to discuss your document preparation needs.
                   </p>
                   <button
-                    onClick={() => { setSubmitted(false); setForm({ fullName: "", email: "", phone: "", serviceType: "", description: "" }); setFileName(null); }}
+                    onClick={() => { setSubmitted(false); setForm({ fullName: "", email: "", phone: "", serviceType: "", description: "" }); }}
                     className="mt-8 text-xs tracking-widest uppercase font-['DM_Sans'] font-medium text-[#B8922A] hover:underline"
                   >
                     Submit Another Request
@@ -227,31 +220,6 @@ export default function Contact() {
                     {errors.description && <p className="text-red-500 text-xs mt-1 font-['DM_Sans']">{errors.description}</p>}
                   </div>
 
-                  {/* File Upload */}
-                  <div className="mb-8">
-                    <label className="jls-label mb-3 block">Supporting Documents (Optional)</label>
-                    <div
-                      className="border-2 border-dashed border-[#e8dfd0] hover:border-[#B8922A] transition-colors p-6 text-center cursor-pointer"
-                      onClick={() => fileRef.current?.click()}
-                    >
-                      <Upload size={20} className="text-[#B8922A] mx-auto mb-2" />
-                      <p className="text-sm text-[#6B7A99] font-['DM_Sans']">
-                        {fileName ? (
-                          <span className="text-[#1A2744] font-medium">{fileName}</span>
-                        ) : (
-                          <>Click to upload a file <span className="text-[#B8922A]">(PDF, DOC, JPG — max 10MB)</span></>
-                        )}
-                      </p>
-                      <input
-                        ref={fileRef}
-                        type="file"
-                        accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
-                        onChange={handleFile}
-                        className="hidden"
-                      />
-                    </div>
-                  </div>
-
                   {/* Consent note */}
                   <p className="text-xs text-[#6B7A99] font-['DM_Sans'] italic mb-6 leading-relaxed">
                     By submitting this form, you confirm that you understand Justice Litigation Solutions provides document preparation services only and does not provide legal advice. Your information will be kept strictly confidential.
@@ -301,29 +269,11 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* What to expect */}
-              <div className="bg-[#F5EDE8] p-7 border-l-4 border-[#B8922A]">
-                <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-[#1A2744] mb-4">What to Expect</h3>
-                <div className="flex flex-col gap-3">
-                  {[
-                    "We review your request within 1–2 business days.",
-                    "We'll contact you to confirm details and provide a quote.",
-                    "Upon agreement, document preparation begins.",
-                    "Completed documents are delivered securely.",
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-2.5">
-                      <span className="font-['Cormorant_Garamond'] text-[#B8922A] font-semibold text-lg leading-tight shrink-0">{i + 1}.</span>
-                      <p className="text-sm text-[#2C3A50] font-['DM_Sans'] leading-relaxed">{item}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
               {/* Disclaimer box */}
-              <div className="bg-white border border-[#e8dfd0] p-6">
-                <div className="section-label mb-2">Disclaimer</div>
-                <p className="text-xs text-[#6B7A99] font-['DM_Sans'] leading-relaxed italic">
-                  Submitting this form does not create an attorney-client relationship. Justice Litigation Solutions is not a law firm and does not provide legal advice. For legal advice, please consult a licensed attorney.
+              <div className="bg-[#F5EDE8] p-6 border border-[#e8dfd0]">
+                <h4 className="font-['Cormorant_Garamond'] text-lg font-semibold text-[#1A2744] mb-3">Disclaimer</h4>
+                <p className="text-xs text-[#6B7A99] font-['DM_Sans'] leading-relaxed">
+                  Submitting this form does not create an attorney-client relationship. Justice Litigation Solutions is not a law firm and does not provide legal advice. Please consult a licensed attorney for legal guidance.
                 </p>
               </div>
             </div>
