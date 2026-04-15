@@ -60,7 +60,7 @@ export default function About() {
       {/* ── BIO SECTION ── */}
       <section style={{ backgroundColor: "#FDF8F0" }} className="py-20">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Portrait */}
             <div className="relative">
               <div
@@ -79,21 +79,36 @@ export default function About() {
             <div>
               <div className="section-label mb-3">Your Legal Document Assistant</div>
               <h2 className="font-['Cormorant_Garamond'] text-4xl font-semibold text-[#1A2744] mb-2">
-                Anna Zeledon
+                Anna Murphy
               </h2>
               <div className="text-[#B8922A] text-sm font-['DM_Sans'] tracking-widest uppercase mb-6">
                 Licensed · Registered · Bonded Legal Document Assistant
               </div>
               <div className="gold-bar-left mb-6">
                 <p className="text-[#2C3A50] font-['DM_Sans'] leading-relaxed">
-                  With a deep commitment to accuracy and client service, I founded Justice Litigation Solutions to provide individuals and professionals with reliable, affordable legal document preparation support. I understand that navigating paperwork can be overwhelming — my role is to make that process clear and manageable.
+                  Anna Murphy is the founder of Justice Litigation Solutions, providing strategic litigation support and legal document preparation for attorneys and self-represented litigants navigating complex legal matters.
                 </p>
               </div>
               <p className="text-[#6B7A99] font-['DM_Sans'] leading-relaxed mb-5">
-                As a Licensed Legal Document Assistant (LDA), I am authorized under California Business & Professions Code §6400 et seq. to prepare legal documents for individuals representing themselves. I am not an attorney and do not provide legal advice, legal representation, or guidance on legal strategy.
+                Anna began her professional career in law enforcement, graduating from the Northwest Florida Law Enforcement Academy in 1995. She later worked in bail enforcement and fugitive recovery in Colorado from 1996 to 1998, gaining firsthand experience in criminal procedure, court orders, and compliance in high-stakes environments.
+              </p>
+              <p className="text-[#6B7A99] font-['DM_Sans'] leading-relaxed mb-5">
+                In 2007, Anna transitioned into the legal field as an office manager for a California litigation practice, where she was trained in-house as a paralegal under direct attorney supervision. She has continued working in that capacity to the present, supporting litigation matters across jurisdictions, including work connected to cases in both California and Alaska.
+              </p>
+              <p className="text-[#6B7A99] font-['DM_Sans'] leading-relaxed mb-5">
+                During the 2008 housing crisis, she developed and managed loan modification and foreclosure defense workflows, contributing to the preservation of housing for over one hundred families. Her work expanded into advanced litigation support, including motion practice, discovery preparation, appellate record organization, and coordinated filings in state, federal, and bankruptcy courts.
+              </p>
+              <p className="text-[#6B7A99] font-['DM_Sans'] leading-relaxed mb-5">
+                In addition to her professional experience, Anna brings extensive firsthand knowledge as a self-represented litigant in multi-year civil and property litigation, including unlawful detainer, ejectment, and federal ADA-related proceedings. This perspective informs her disciplined, practical approach to litigation support.
+              </p>
+              <p className="text-[#6B7A99] font-['DM_Sans'] leading-relaxed mb-5">
+                Today, Anna serves as a Litigation Support Strategist and Legal Document Assistant (LDA), using AI-enhanced drafting tools and structured workflows to expand procedural options, improve efficiency, and support court-ready outcomes—while maintaining full respect for the role of licensed legal counsel.
+              </p>
+              <p className="text-[#6B7A99] font-['DM_Sans'] leading-relaxed mb-5">
+                Anna also has experience in real estate, having worked as a licensed real estate agent in Florida. This background informs her understanding of property transactions, title issues, and foreclosure-related matters, which continue to be a core component of her litigation support work.
               </p>
               <p className="text-[#6B7A99] font-['DM_Sans'] leading-relaxed mb-8">
-                Based in Lincoln, California, I am bonded for $25,000 through Jet Insurance Company (Bond #BX0081398) to ensure the highest level of client protection and professional accountability. Every client receives personalized attention, clear communication, and documents prepared to the highest standard of accuracy and compliance.
+                Her work is grounded in real-world litigation experience across civil, criminal, and multi-jurisdictional matters, with a focus on disciplined execution and strategic support.
               </p>
               <div className="flex flex-wrap gap-4">
                 <div className="bg-[#F5EDE8] px-5 py-3 text-center">
