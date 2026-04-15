@@ -21,7 +21,7 @@ export default function Footer() {
         </p>
         <Link
           href="/contact"
-          onClick={scrollToTopOnPrimaryCtaNavigation ? scrollToTopOnQuickLinkNavigation : undefined}
+          onClick={scrollToTopOnQuickLinkNavigation}
           className="inline-block bg-white text-[#1A2744] text-xs tracking-[0.14em] uppercase font-['DM_Sans'] font-semibold py-3 px-8 hover:bg-[#FDF8F0] transition-colors"
         >
           Submit a Request
