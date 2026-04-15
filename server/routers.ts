@@ -34,11 +34,45 @@ export const appRouter = router({
       )
       .mutation(async ({ input }) => {
         try {
-          // Send notification to owner (Anna)
-          const title = `New Intake Request from ${input.fullName}`;
-          const content = `Client Name: ${input.fullName}\nEmail: ${input.email}\nPhone: ${input.phone}\nService Type: ${input.serviceType}\nDescription: ${input.description}\n\nPlease review this request and respond to the client within 1-2 business days.`;
+          // Send email directly to Anna at amz@justicelitsol.com
+          const emailSubject = `New Intake Request from ${input.fullName}`;
+          const emailBody = `
+Client Name: ${input.fullName}
+Email: ${input.email}
+Phone: ${input.phone}
+Service Type: ${input.serviceType}
 
-          await notifyOwner({ title, content });
+Description:
+${input.description}
+
+---
+Please review this request and respond to the client within 1-2 business days.
+`;
+
+          // Send email using Formspree
+          try {
+            const emailResponse = await fetch('https://formspree.io/f/mqewedoa', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                name: input.fullName,
+                email: input.email,
+                phone: input.phone,
+                serviceType: input.serviceType,
+                description: input.description,
+                _to: 'amz@justicelitsol.com',
+                _subject: emailSubject,
+              }),
+            });
+            console.log('[Contact] Email sent to amz@justicelitsol.com');
+          } catch (emailError) {
+            console.warn('[Contact] Email service error:', emailError);
+            // Still notify owner as fallback
+            await notifyOwner({ 
+              title: emailSubject, 
+              content: emailBody 
+            });
+          }
 
           return {
             success: true,
