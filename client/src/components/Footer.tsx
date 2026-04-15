@@ -28,7 +28,7 @@ export default function Footer() {
             Legal Document Preparation
           </div>
           <p className="text-white/60 text-sm leading-relaxed font-['DM_Sans']">
-            Professional document preparation services by a Licensed, Registered, and Bonded Legal Document Assistant. We are not a law firm and do not provide legal advice.
+            Anna Murphy is a Litigation Support Strategist and Legal Document Assistant (LDA) with over 15 years of experience supporting complex civil, property, criminal, and appellate matters. With a background in law enforcement and bail enforcement, she provides strategic document preparation and filing coordination for attorneys and self-represented litigants, focused on structure, clarity, and forward motion in complex cases.
           </p>
         </div>
 
