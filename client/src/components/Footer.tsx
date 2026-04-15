@@ -5,7 +5,17 @@
 import { Link } from "wouter";
 import { Phone, Mail, MapPin, Shield } from "lucide-react";
 
-export default function Footer() {
+type FooterProps = {
+  scrollToTopOnPrimaryCtaNavigation?: boolean;
+};
+
+export default function Footer({ scrollToTopOnPrimaryCtaNavigation = false }: FooterProps) {
+  const scrollToTopOnQuickLinkNavigation = () => {
+    window.setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }, 0);
+  };
+
   return (
     <footer style={{ backgroundColor: "#1A2744" }} className="text-white">
       {/* Top CTA band */}
@@ -13,7 +23,11 @@ export default function Footer() {
         <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-white mb-3">
           Ready to move forward with your documents?
         </p>
-        <Link href="/contact" className="inline-block bg-white text-[#1A2744] text-xs tracking-[0.14em] uppercase font-['DM_Sans'] font-semibold py-3 px-8 hover:bg-[#FDF8F0] transition-colors">
+        <Link
+          href="/contact"
+          onClick={scrollToTopOnPrimaryCtaNavigation ? scrollToTopOnQuickLinkNavigation : undefined}
+          className="inline-block bg-white text-[#1A2744] text-xs tracking-[0.14em] uppercase font-['DM_Sans'] font-semibold py-3 px-8 hover:bg-[#FDF8F0] transition-colors"
+        >
           Submit a Request
         </Link>
       </div>
@@ -47,6 +61,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
+                onClick={scrollToTopOnQuickLinkNavigation}
                 className="text-white/60 hover:text-[#B8922A] text-sm font-['DM_Sans'] transition-colors"
               >
                 {link.label}
