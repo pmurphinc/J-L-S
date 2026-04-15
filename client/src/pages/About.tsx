@@ -33,6 +33,12 @@ const values = [
 ];
 
 export default function About() {
+  const scrollToTopOnCtaNavigation = () => {
+    window.setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }, 0);
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
@@ -178,13 +184,13 @@ export default function About() {
           <p className="text-[#6B7A99] font-['DM_Sans'] mb-8 max-w-lg mx-auto">
             Submit a request today and receive prompt, professional assistance with your legal document preparation needs.
           </p>
-          <Link href="/contact" className="btn-gold">
+          <Link href="/contact" onClick={scrollToTopOnCtaNavigation} className="btn-gold">
             Request Document Assistance
           </Link>
         </div>
       </section>
 
-      <Footer />
+      <Footer scrollToTopOnPrimaryCtaNavigation />
     </div>
   );
 }
