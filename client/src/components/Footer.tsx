@@ -6,6 +6,12 @@ import { Link } from "wouter";
 import { Phone, Mail, MapPin, Shield } from "lucide-react";
 
 export default function Footer() {
+  const scrollToTopOnQuickLinkNavigation = () => {
+    window.setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }, 0);
+  };
+
   return (
     <footer style={{ backgroundColor: "#1A2744" }} className="text-white">
       {/* Top CTA band */}
@@ -47,6 +53,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
+                onClick={scrollToTopOnQuickLinkNavigation}
                 className="text-white/60 hover:text-[#B8922A] text-sm font-['DM_Sans'] transition-colors"
               >
                 {link.label}
