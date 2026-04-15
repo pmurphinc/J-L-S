@@ -5,11 +5,7 @@
 import { Link } from "wouter";
 import { Phone, Mail, MapPin, Shield } from "lucide-react";
 
-type FooterProps = {
-  scrollToTopOnPrimaryCtaNavigation?: boolean;
-};
-
-export default function Footer({ scrollToTopOnPrimaryCtaNavigation = false }: FooterProps) {
+export default function Footer() {
   const scrollToTopOnQuickLinkNavigation = () => {
     window.setTimeout(() => {
       window.scrollTo({ top: 0, behavior: "auto" });
