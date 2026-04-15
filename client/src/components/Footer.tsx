@@ -18,19 +18,6 @@ export default function Footer({ scrollToTopOnPrimaryCtaNavigation }: FooterProp
 
   return (
     <footer style={{ backgroundColor: "#1A2744" }} className="text-white">
-      {/* Top CTA band */}
-      <div style={{ backgroundColor: "#B8922A" }} className="py-8 px-6 text-center">
-        <p className="font-['Cormorant_Garamond'] text-2xl font-semibold text-white mb-3">
-          Ready to move forward with your documents?
-        </p>
-        <Link
-          href="/contact"
-          onClick={scrollToTopOnQuickLinkNavigation}
-          className="inline-block bg-white text-[#1A2744] text-xs tracking-[0.14em] uppercase font-['DM_Sans'] font-semibold py-3 px-8 hover:bg-[#FDF8F0] transition-colors"
-        >
-          Submit a Request
-        </Link>
-      </div>
 
       <div className="container mx-auto py-14 grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Brand column */}
