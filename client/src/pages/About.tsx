@@ -85,14 +85,14 @@ export default function About() {
             <div>
               <div className="section-label mb-3">Your Legal Document Assistant</div>
               <h2 className="font-['Cormorant_Garamond'] text-4xl font-semibold text-[#1A2744] mb-2">
-                Anna Murphy
+                Anna Murphy Zeledón
               </h2>
               <div className="text-[#B8922A] text-sm font-['DM_Sans'] tracking-widest uppercase mb-6">
                 Licensed · Registered · Bonded Legal Document Assistant
               </div>
               <div className="gold-bar-left mb-6">
                 <p className="text-[#2C3A50] font-['DM_Sans'] leading-relaxed">
-                  Anna Murphy is the founder of Justice Litigation Solutions, providing strategic litigation support and legal document preparation for attorneys and self-represented litigants navigating complex legal matters.
+                  Anna Murphy Zeledón is the founder of Justice Litigation Solutions, providing strategic litigation support and legal document preparation for attorneys and self-represented litigants navigating complex legal matters.
                 </p>
               </div>
               <p className="text-[#6B7A99] font-['DM_Sans'] leading-relaxed mb-5">

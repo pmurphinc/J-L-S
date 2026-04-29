@@ -29,7 +29,7 @@ export default function Footer({ scrollToTopOnPrimaryCtaNavigation }: FooterProp
             Legal Document Preparation
           </div>
           <p className="text-white/60 text-sm leading-relaxed font-['DM_Sans']">
-            Anna Murphy is a Litigation Support Strategist and Legal Document Assistant (LDA) with over 15 years of experience supporting complex civil, property, criminal, and appellate matters. With a background in law enforcement and bail enforcement, she provides strategic document preparation and filing coordination for attorneys and self-represented litigants, focused on structure, clarity, and forward motion in complex cases.
+            Anna Murphy Zeledón is a Litigation Support Strategist and Legal Document Assistant (LDA) with over 15 years of experience supporting complex civil, property, criminal, and appellate matters. With a background in law enforcement and bail enforcement, she provides strategic document preparation and filing coordination for attorneys and self-represented litigants, focused on structure, clarity, and forward motion in complex cases.
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export default function Footer({ scrollToTopOnPrimaryCtaNavigation }: FooterProp
             </div>
             <div className="flex items-start gap-2.5">
               <MapPin size={14} className="text-[#B8922A] mt-0.5 shrink-0" />
-              <span>Lincoln, CA</span>
+              <span>570 5th St<br />Lincoln, CA 95648</span>
             </div>
             <div className="flex items-start gap-2.5">
               <Shield size={14} className="text-[#B8922A] mt-0.5 shrink-0" />

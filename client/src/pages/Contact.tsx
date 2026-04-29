@@ -248,8 +248,8 @@ export default function Contact() {
                   <div className="flex items-start gap-3">
                     <MapPin size={14} className="text-[#B8922A] mt-0.5 shrink-0" />
                     <div>
-                      <div className="text-white/50 text-xs tracking-widest uppercase mb-0.5">Service Area</div>
-                      <div className="text-white/80">Lincoln, California</div>
+                      <div className="text-white/50 text-xs tracking-widest uppercase mb-0.5">Location</div>
+                      <div className="text-white/80">570 5th St<br />Lincoln, CA 95648</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
