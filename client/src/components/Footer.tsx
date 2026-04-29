@@ -63,7 +63,7 @@ export default function Footer({ scrollToTopOnPrimaryCtaNavigation }: FooterProp
           <div className="flex flex-col gap-3 text-sm font-['DM_Sans'] text-white/70">
             <div className="flex items-start gap-2.5">
               <Phone size={14} className="text-[#B8922A] mt-0.5 shrink-0" />
-              <a href="tel:" className="hover:text-[#B8922A] transition-colors">Contact for phone</a>
+              <a href="tel:+19162298758" className="hover:text-[#B8922A] transition-colors">+1 916-229-8758</a>
             </div>
             <div className="flex items-start gap-2.5">
               <Mail size={14} className="text-[#B8922A] mt-0.5 shrink-0" />
