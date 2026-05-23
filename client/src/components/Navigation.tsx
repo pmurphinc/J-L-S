@@ -31,6 +31,19 @@ export default function Navigation() {
     setMobileOpen(false);
   }, [location]);
 
+  useEffect(() => {
+    if (!mobileOpen) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMobileOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [mobileOpen]);
+
   const isHome = location === "/";
   const navBg = scrolled || !isHome
     ? "bg-[#1A2744] shadow-lg"
@@ -40,9 +53,9 @@ export default function Navigation() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navBg}`}
     >
-      <div className="container mx-auto flex items-center justify-between py-4">
+      <div className="container mx-auto flex items-center justify-between gap-6 py-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3.5 group">
+        <Link href="/" className="flex shrink-0 items-center gap-3.5 group">
           {/* Scales icon */}
           <svg width="34" height="34" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
             <circle cx="14" cy="14" r="13.5" stroke="#B8922A" strokeWidth="1"/>
@@ -64,7 +77,7 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex shrink-0 items-center justify-end gap-5 xl:gap-8" aria-label="Primary navigation">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -81,7 +94,7 @@ export default function Navigation() {
           ))}
           <Link
             href="/contact"
-            className="btn-gold text-xs py-2.5 px-5"
+            className="btn-gold text-xs py-2.5 px-4 xl:px-5"
           >
             Request Assistance
           </Link>
@@ -89,9 +102,12 @@ export default function Navigation() {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-white p-1"
+          type="button"
+          className="lg:hidden shrink-0 text-white p-1"
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
+          aria-controls="mobile-navigation"
+          aria-expanded={mobileOpen}
+          aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
         >
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -99,7 +115,7 @@ export default function Navigation() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-[#1A2744] border-t border-white/10 px-6 py-6 flex flex-col gap-5">
+        <div id="mobile-navigation" className="lg:hidden bg-[#1A2744] border-t border-white/10 px-6 py-6 flex flex-col gap-5">
           {navLinks.map((link) => (
             <Link
               key={link.href}
