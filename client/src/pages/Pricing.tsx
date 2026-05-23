@@ -11,13 +11,13 @@ const pricingTiers = [
   {
     name: "Essential",
     tagline: "Single document preparation",
-    startingAt: "$75",
+    startingAt: "$199",
     period: "per document",
-    description: "Ideal for individuals who need one specific document prepared accurately and professionally.",
+    description: "Ideal for individuals who need a legal or demand letter document prepared accurately and professionally.",
     features: [
       "Single document preparation",
       "One revision included",
-      "Delivered within 3–5 business days",
+      "Delivered within 24 hours, not including weekends & holidays",
       "Email delivery",
       "Confidential handling",
     ],
@@ -27,14 +27,14 @@ const pricingTiers = [
   {
     name: "Standard",
     tagline: "Document package preparation",
-    startingAt: "$200",
+    startingAt: "$499",
     period: "per package",
     description: "For matters requiring multiple related documents prepared as a complete, organized package.",
     features: [
       "Up to 5 related documents",
       "Two revisions included",
-      "Delivered within 5–7 business days",
-      "Email + print-ready delivery",
+      "Delivered within 3-5 business days",
+      "Email delivery",
       "Filing checklist included",
       "Confidential handling",
     ],
@@ -44,14 +44,14 @@ const pricingTiers = [
   {
     name: "Comprehensive",
     tagline: "Full matter document support",
-    startingAt: "$400",
+    startingAt: "$799",
     period: "per matter",
     description: "Complete document preparation support for complex matters requiring ongoing assistance.",
     features: [
-      "Unlimited documents for the matter",
+      "Limited to 12 documents for the matter",
       "Unlimited revisions",
       "Priority turnaround",
-      "Email + print-ready delivery",
+      "Email delivery",
       "Filing checklist + organization",
       "Dedicated point of contact",
       "Confidential handling",
@@ -62,11 +62,12 @@ const pricingTiers = [
 ];
 
 const addOns = [
-  { name: "Rush Processing (24–48 hrs)", price: "+$50" },
+  { name: "Rush Processing (Less than 24 hrs)", price: "+$50" },
   { name: "Notarization Coordination", price: "Contact for pricing" },
   { name: "Court Filing Package Assembly", price: "Starting at $50" },
-  { name: "Attorney Support (per hour)", price: "Starting at $45/hr" },
+  { name: "Attorney Support (per hour)", price: "Starting at $145/hr" },
   { name: "Custom Quote for Complex Matters", price: "Free Consultation" },
+  { name: "Court Management and Filing", price: "Starting at $99 + filing fees" },
 ];
 
 export default function Pricing() {

@@ -5,7 +5,7 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Phone, Mail, MapPin, Clock, CheckCircle, Shield } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, CheckCircle, Shield, BadgeCheck } from "lucide-react";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 
@@ -238,6 +238,13 @@ export default function Contact() {
               <div className="bg-[#1A2744] p-7 text-white">
                 <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold mb-5">Contact Information</h3>
                 <div className="flex flex-col gap-4 text-sm font-['DM_Sans']">
+                  <div className="flex items-start gap-3">
+                    <BadgeCheck size={14} className="text-[#B8922A] mt-0.5 shrink-0" />
+                    <div>
+                      <div className="text-white/50 text-xs tracking-widest uppercase mb-0.5">Registration</div>
+                      <div className="text-white/80">Placer County Registered Legal Document Assistant<br />No. 26-003</div>
+                    </div>
+                  </div>
                   <div className="flex items-start gap-3">
                     <Mail size={14} className="text-[#B8922A] mt-0.5 shrink-0" />
                     <div>

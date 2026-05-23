@@ -15,22 +15,22 @@ const services = [
   {
     icon: FileText,
     title: "Legal Document Preparation",
-    desc: "Accurate, professionally prepared legal documents for a wide range of personal and civil matters — drafted to your specifications.",
+    desc: "Accurate, professionally prepared legal documents for a wide range of personal and civil matters — drafted for self represented litigants to your specifications.",
   },
   {
     icon: Stamp,
     title: "Court Filing Assistance",
-    desc: "Guidance and support in organizing and preparing documents for submission to the appropriate court or agency.",
+    desc: "Guidance case management, guidance and support in organizing and preparing documents for submission to the appropriate court or agency.",
   },
   {
     icon: Briefcase,
     title: "Administrative Legal Support",
-    desc: "Comprehensive administrative assistance for document management, correspondence preparation, and procedural compliance.",
+    desc: "Comprehensive administrative assistance for legal document management, correspondence preparation, and procedural compliance.",
   },
   {
     icon: Users,
     title: "Attorney Support Services",
-    desc: "Reliable document preparation support for legal professionals, helping streamline caseload and reduce administrative burden.",
+    desc: "Reliable document preparation support as a certified AI drafting specialist for atorneys and legal professionals, helping streamline caseload and reduce administrative burden.",
   },
 ];
 

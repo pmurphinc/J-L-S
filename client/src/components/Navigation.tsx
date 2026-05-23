@@ -42,22 +42,22 @@ export default function Navigation() {
     >
       <div className="container mx-auto flex items-center justify-between py-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-3.5 group">
           {/* Scales icon */}
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="34" height="34" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
             <circle cx="14" cy="14" r="13.5" stroke="#B8922A" strokeWidth="1"/>
             <line x1="14" y1="6" x2="14" y2="22" stroke="#B8922A" strokeWidth="1.2"/>
             <line x1="7" y1="10" x2="21" y2="10" stroke="#B8922A" strokeWidth="1.2"/>
             <path d="M7 10 L4 16 Q5.5 18 7 16 Q8.5 18 10 16 L7 10Z" fill="#B8922A" opacity="0.85"/>
             <path d="M21 10 L18 16 Q19.5 18 21 16 Q22.5 18 24 16 L21 10Z" fill="#B8922A" opacity="0.85"/>
           </svg>
-          <div>
+          <div className="whitespace-nowrap">
             <div
-              className="font-['Cormorant_Garamond'] text-lg font-semibold leading-tight tracking-wide text-white"
+              className="font-['Cormorant_Garamond'] text-xl sm:text-[1.35rem] font-semibold leading-tight tracking-wide text-white"
             >
               Justice Litigation
             </div>
-            <div className="text-[0.6rem] tracking-[0.2em] uppercase text-[#B8922A] font-['DM_Sans']">
+            <div className="text-[0.7rem] tracking-[0.2em] uppercase text-[#B8922A] font-['DM_Sans']">
               Solutions
             </div>
           </div>
