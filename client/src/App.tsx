@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Pricing from "./pages/Pricing";
+import PayOnline from "./pages/PayOnline";
 import Contact from "./pages/Contact";
 import Disclaimer from "./pages/Disclaimer";
 import NotFound from "./pages/NotFound";
@@ -18,6 +19,7 @@ function Router() {
       <Route path="/about" component={About} />
       <Route path="/services" component={Services} />
       <Route path="/pricing" component={Pricing} />
+      <Route path="/pay-online" component={PayOnline} />
       <Route path="/contact" component={Contact} />
       <Route path="/disclaimer" component={Disclaimer} />
       <Route path="/404" component={NotFound} />

@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/pricing", label: "Pricing" },
+  { href: "/pay-online", label: "Pay Online" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -77,12 +78,12 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex shrink-0 items-center justify-end gap-5 xl:gap-8" aria-label="Primary navigation">
+        <nav className="hidden lg:flex shrink-0 items-center justify-end gap-3 xl:gap-6" aria-label="Primary navigation">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`text-[0.72rem] tracking-[0.14em] uppercase font-['DM_Sans'] font-medium transition-colors duration-200 relative group
+              className={`text-[0.68rem] xl:text-[0.72rem] tracking-[0.12em] xl:tracking-[0.14em] uppercase font-['DM_Sans'] font-medium transition-colors duration-200 relative group whitespace-nowrap
                 ${location === link.href ? "text-[#B8922A]" : "text-white/80 hover:text-white"}`}
             >
               {link.label}
@@ -94,7 +95,7 @@ export default function Navigation() {
           ))}
           <Link
             href="/contact"
-            className="btn-gold text-xs py-2.5 px-4 xl:px-5"
+            className="btn-gold text-xs py-2.5 px-3 xl:px-5 whitespace-nowrap"
           >
             Request Assistance
           </Link>

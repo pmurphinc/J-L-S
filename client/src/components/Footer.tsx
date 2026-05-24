@@ -42,6 +42,7 @@ export default function Footer({ scrollToTopOnPrimaryCtaNavigation }: FooterProp
               { href: "/about", label: "About" },
               { href: "/services", label: "Services" },
               { href: "/pricing", label: "Pricing" },
+              { href: "/pay-online", label: "Pay Online" },
               { href: "/contact", label: "Contact / Intake Form" },
               { href: "/disclaimer", label: "Disclaimer" },
             ].map((link) => (
