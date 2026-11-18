@@ -10,7 +10,7 @@ import { FileText, Stamp, Briefcase, Users, CheckCircle, ArrowRight } from "luci
 import { useAuth } from "@/_core/hooks/useAuth";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663462787524/Cz8sWUSTaWsiTX5qvA7ov6/hero-bg-texture-PpW2NhNwV6UxpDX5fTMGD5.webp";
-const LADY_JUSTICE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663462787524/Cz8sWUSTaWsiTX5qvA7ov6/hero-lady-justice-nAbqR9xb2SGa8s7P58a4wV.webp";
+const LADY_JUSTICE = "/images/lady-justice.png";
 const SERVICES_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663462787524/Cz8sWUSTaWsiTX5qvA7ov6/services-bg-iF9Hwbup8XudBk7PD6NxwG.webp";
 
 const services = [
