@@ -29,7 +29,7 @@ export default function Footer({ scrollToTopOnPrimaryCtaNavigation }: FooterProp
             Legal Document Preparation
           </div>
           <p className="text-white/60 text-sm leading-relaxed font-['DM_Sans']">
-            Anna Murphy Zeledón is a Litigation Support Strategist and Legal Document Assistant (LDA) with over 15 years of experience supporting complex civil, property, criminal, and appellate matters. With a background in law enforcement and bail enforcement, she provides strategic document preparation and filing coordination for attorneys and self-represented litigants, focused on structure, clarity, and forward motion in complex cases.
+            Anna M. Zeledon is a Litigation Support Strategist and Legal Document Assistant (LDA) with over 15 years of experience supporting complex civil, property, criminal, and appellate matters. With a background in law enforcement and bail enforcement, she provides strategic document preparation and filing coordination for attorneys and self-represented litigants, focused on structure, clarity, and forward motion in complex cases.
           </p>
         </div>
 
@@ -72,18 +72,24 @@ export default function Footer({ scrollToTopOnPrimaryCtaNavigation }: FooterProp
             </div>
             <div className="flex items-start gap-2.5">
               <MapPin size={14} className="text-[#B8922A] mt-0.5 shrink-0" />
-              <span>570 5th St<br />Lincoln, CA 95648</span>
+              <span>570 5th Street, Lincoln, CA 95648</span>
             </div>
             <div className="flex items-start gap-2.5">
               <Shield size={14} className="text-[#B8922A] mt-0.5 shrink-0" />
               <div>
-                <div>Licensed Legal Document Assistant</div>
+                <div className="font-semibold text-white">Anna M. Zeledon</div>
+                <div>Registered Legal Document Assistant</div>
+                <div>Placer County No. 26-003</div>
+                <div>Registration Expires: 2/16/2028</div>
                 <div>Bonded: $25,000 (Jet Insurance)</div>
                 <div>Bond #BX0081398</div>
               </div>
             </div>
           </div>
         </div>
+        <p className="md:col-span-3 text-white/90 text-sm leading-relaxed font-['DM_Sans']">
+          I am not an attorney. I can only provide self-help services at your specific direction.
+        </p>
       </div>
 
       {/* Bottom bar */}

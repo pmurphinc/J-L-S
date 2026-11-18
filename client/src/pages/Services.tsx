@@ -30,7 +30,8 @@ const services = [
   {
     icon: Users,
     title: "Attorney Support Services",
-    desc: "Reliable document preparation support as a certified AI drafting specialist for atorneys and legal professionals, helping streamline caseload and reduce administrative burden.",
+    desc: "Reliable document preparation support as a certified AI drafting specialist for attorneys and legal professionals, helping streamline caseload and reduce administrative burden.",
+    details: "Contract paralegal support for California attorneys, performed remotely. All attorney work is performed under the supervising attorney's direction and review.",
   },
 ];
 
@@ -247,6 +248,9 @@ export default function Services() {
                 <svc.icon size={24} className="text-[#B8922A] mb-4" />
                 <h3 className="font-['Cormorant_Garamond'] text-xl font-semibold text-white mb-2">{svc.title}</h3>
                 <p className="text-white/65 text-sm font-['DM_Sans'] leading-relaxed">{svc.desc}</p>
+                {svc.details && (
+                  <p className="mt-3 text-white/65 text-sm font-['DM_Sans'] leading-relaxed">{svc.details}</p>
+                )}
               </div>
             ))}
           </div>

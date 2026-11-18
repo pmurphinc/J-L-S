@@ -11,7 +11,7 @@ const disclaimerSections = [
   {
     title: "Not an Attorney",
     content:
-      "Justice Litigation Solutions is operated by a Licensed Legal Document Assistant (LDA) registered in the State of California. The operator of this business is not an attorney and is not authorized to practice law. Nothing on this website, in any communication, or in any document prepared by Justice Litigation Solutions constitutes the practice of law.",
+      "Justice Litigation Solutions is operated by a Registered Legal Document Assistant (LDA) in California. I am not an attorney. I can only provide self-help services at your specific direction. The operator of this business is not authorized to practice law. Nothing on this website, in any communication, or in any document prepared by Justice Litigation Solutions constitutes the practice of law.",
   },
   {
     title: "No Legal Advice",

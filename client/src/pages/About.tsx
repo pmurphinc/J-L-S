@@ -28,7 +28,7 @@ const values = [
   {
     icon: Award,
     title: "Professional Standards",
-    desc: "As a Licensed, Registered, and Bonded LDA, all services are delivered in full compliance with California Business & Professions Code §6400 et seq.",
+    desc: "As a Registered and Bonded LDA, all services are delivered in full compliance with California Business & Professions Code §6400 et seq.",
   },
 ];
 
@@ -85,14 +85,14 @@ export default function About() {
             <div>
               <div className="section-label mb-3">Your Legal Document Assistant</div>
               <h2 className="font-['Cormorant_Garamond'] text-4xl font-semibold text-[#1A2744] mb-2">
-                Anna Murphy Zeledón
+                Anna M. Zeledon
               </h2>
               <div className="text-[#B8922A] text-sm font-['DM_Sans'] tracking-widest uppercase mb-6">
-                Licensed · Registered · Bonded Legal Document Assistant
+                Registered · Bonded Legal Document Assistant
               </div>
               <div className="gold-bar-left mb-6">
                 <p className="text-[#2C3A50] font-['DM_Sans'] leading-relaxed">
-                  Anna Murphy Zeledón is the founder of Justice Litigation Solutions, providing strategic litigation support and legal document preparation for attorneys and self-represented litigants navigating complex legal matters.
+                  Anna M. Zeledon is the founder of Justice Litigation Solutions, providing strategic litigation support and legal document preparation for attorneys and self-represented litigants navigating complex legal matters.
                 </p>
               </div>
               <p className="text-[#6B7A99] font-['DM_Sans'] leading-relaxed mb-5">
@@ -118,7 +118,7 @@ export default function About() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <div className="bg-[#F5EDE8] px-5 py-3 text-center">
-                  <div className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1A2744]">Licensed</div>
+                  <div className="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#1A2744]">Registered</div>
                   <div className="text-xs text-[#6B7A99] font-['DM_Sans'] tracking-wider uppercase">& Bonded</div>
                 </div>
                 <div className="bg-[#F5EDE8] px-5 py-3 text-center">

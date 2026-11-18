@@ -65,7 +65,7 @@ export default function Home() {
             {/* Left: text */}
             <div>
               <div className="section-label mb-5 animate-fade-up">
-                Licensed · Registered · Bonded
+                REGISTERED · BONDED LEGAL DOCUMENT ASSISTANT
               </div>
               <h1
                 className="font-['Cormorant_Garamond'] text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-[1.08] mb-6 animate-fade-up animate-fade-up-delay-1"
@@ -111,7 +111,7 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {[
-              { title: "Licensed", desc: "Fully licensed Legal Document Assistant operating in compliance with California Business & Professions Code." },
+              { title: "Document Preparation", desc: "Professional legal document preparation at your direction." },
               { title: "Registered", desc: "Officially registered with the county, ensuring accountability and professional standards." },
               { title: "Bonded", desc: "Bonded for your protection, providing an added layer of security and peace of mind." },
             ].map((item) => (
