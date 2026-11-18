@@ -9,9 +9,7 @@ import Footer from "@/components/Footer";
 import { FileText, Stamp, Briefcase, Users, CheckCircle, ArrowRight } from "lucide-react";
 import { useAuth } from "@/_core/hooks/useAuth";
 
-const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663462787524/Cz8sWUSTaWsiTX5qvA7ov6/hero-bg-texture-PpW2NhNwV6UxpDX5fTMGD5.webp";
 const LADY_JUSTICE = "/images/lady-justice.png";
-const SERVICES_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663462787524/Cz8sWUSTaWsiTX5qvA7ov6/services-bg-iF9Hwbup8XudBk7PD6NxwG.webp";
 
 const services = [
   {
@@ -52,9 +50,7 @@ export default function Home() {
         className="relative min-h-screen flex items-center overflow-hidden"
         style={{
           backgroundColor: "#1A2744",
-          backgroundImage: `url(${HERO_BG})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundImage: "radial-gradient(ellipse at 75% 45%, #6B7A9930 0%, transparent 60%)",
         }}
       >
         {/* Overlay */}
@@ -134,8 +130,8 @@ export default function Home() {
       {/* ── SERVICES OVERVIEW ── */}
       <section style={{ backgroundColor: "#1A2744" }} className="py-20 relative overflow-hidden">
         <div
-          className="absolute inset-0 opacity-10"
-          style={{ backgroundImage: `url(${SERVICES_BG})`, backgroundSize: "cover", backgroundPosition: "center" }}
+          className="absolute inset-0"
+          style={{ backgroundImage: "radial-gradient(ellipse at 50% 20%, #B8922A18 0%, transparent 65%)" }}
         />
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-14">

@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import { Link } from "wouter";
 import { Shield, Eye, Award, Lock } from "lucide-react";
 
-const ABOUT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663462787524/Cz8sWUSTaWsiTX5qvA7ov6/about-portrait-NAWgghBCB6RTwVFJierRAc.webp";
 
 const values = [
   {
@@ -67,17 +66,18 @@ export default function About() {
       <section style={{ backgroundColor: "#FDF8F0" }} className="py-20">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Portrait */}
+            {/* Brand artwork */}
             <div className="relative">
               <div
                 className="absolute -top-4 -left-4 w-full h-full border-2 border-[#B8922A]/30"
                 style={{ zIndex: 0 }}
               />
               <img
-                src={ABOUT_IMG}
-                alt="Legal Document Assistant — Justice Litigation Solutions"
-                className="relative z-10 w-full max-w-md mx-auto object-cover shadow-xl"
-                style={{ maxHeight: "520px", objectPosition: "top" }}
+                src="/images/lady-justice.png"
+                alt="Lady Justice — Justice Litigation Solutions"
+                width={500}
+                height={500}
+                className="relative z-10 block h-auto w-full max-w-md mx-auto bg-[#FDF8F0] shadow-xl"
               />
             </div>
 
