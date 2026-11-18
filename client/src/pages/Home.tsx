@@ -89,11 +89,15 @@ export default function Home() {
 
             {/* Right: Lady Justice illustration */}
             <div className="hidden lg:flex justify-center items-end">
-              <img
-                src={LADY_JUSTICE}
-                alt="Lady Justice — Justice Litigation Solutions"
-                className="max-h-[580px] object-contain drop-shadow-2xl animate-fade-up animate-fade-up-delay-2"
-              />
+              <div className="w-full max-w-[400px] rounded-2xl border border-[#B8922A]/50 bg-[#FDF8F0] p-3 shadow-2xl animate-fade-up animate-fade-up-delay-2">
+                <img
+                  src={LADY_JUSTICE}
+                  alt="Lady Justice — Justice Litigation Solutions"
+                  width={500}
+                  height={500}
+                  className="block h-auto w-full"
+                />
+              </div>
             </div>
           </div>
         </div>
